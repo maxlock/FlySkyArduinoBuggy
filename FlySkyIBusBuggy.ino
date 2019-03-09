@@ -8,11 +8,6 @@
 #include <AFMotor.h>
 #include <math.h>
 
-float left;
-String left_dir;
-float right;
-String right_dir;
-
 AF_DCMotor left_motor(4, MOTOR12_64KHZ);  // define motor on channel 1 with 64KHz PWM
 AF_DCMotor right_motor(3, MOTOR12_64KHZ);  // define motor on channel 2 with 64KHz PWM
 
@@ -34,8 +29,8 @@ void loop()
 
   t=t-(3.14/4); // rotate -45 degrees
 
-  left=(r * cos(t)); // convert back to cartesian coords
-  right=(r * sin(t));
+  float left=(r * cos(t)); // convert back to cartesian coords
+  float right=(r * sin(t));
 
   left = (left * sqrt(2)); // rescale the new coords
   right = (right * sqrt(2));
