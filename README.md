@@ -8,5 +8,4 @@ a differential steering algorithm from [Stackexchange](https://electronics.stack
 Connect the motor sheild you your arduino, and motors to whichever channels you want. 1 and 2 give you more options to set frequency.
 You'll need to connect the receiver to Gnd and 5v, as well as RX (pin 0) but as it's not brought out to a header you may have to be creative.
 
-An outstanding issue is that once powered on, one of the motors will rotate until the TX and RX are communicating. Additionally there
-is no failsafe so if the TX is powered off or goes out of range the buggy will continue at it's current rate.
+An outstanding issue is that there is no failsafe so if the TX is powered off or goes out of range the buggy will continue at it's current rate.
